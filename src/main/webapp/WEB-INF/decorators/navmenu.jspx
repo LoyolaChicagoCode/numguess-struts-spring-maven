@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" 
+  xmlns:fmt="/tld/jstl-fmt" 
+  xmlns:html="/tld/struts-html" 
+  version="2.0">
+    <div class="navmenuitems">
+      <html:link action="/restart">
+        <fmt:message key="right.link.restart"/>
+      </html:link>
+    </div>
+</jsp:root>

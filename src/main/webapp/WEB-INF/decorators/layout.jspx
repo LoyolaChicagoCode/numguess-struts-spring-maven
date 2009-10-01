@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" 
+  xmlns:decorator="/tld/sitemesh-decorator" 
+  xmlns:page="/tld/sitemesh-page" 
+  xmlns:c="/tld/jstl-c"
+  version="2.0">
+
+    <div id="layout-header">
+      header
+	  <div id="layout-logo">
+        <c:url value="/images/logo.gif" var="logo"/>
+        <img class="logo" src="${logo}" alt="[Logo]"/>
+      </div>
+      <div id="layout-restofheader">
+        <page:applyDecorator name="panel" page="/WEB-INF/decorators/header.jspx"/>
+      </div>
+      header
+    </div>
+
+    <div id="layout-navmenu">
+      navmenu
+      <page:applyDecorator name="panel" page="/WEB-INF/decorators/navmenu.jspx"/>
+      navmenu
+    </div>
+
+    <div id="layout-content">
+      content
+      <decorator:body/>
+      content
+    </div>          
+
+    <div id="layout-footer">
+      footer
+      <page:applyDecorator name="panel" page="/WEB-INF/decorators/footer.jspx"/>
+      footer
+    </div>
+
+</jsp:root>
